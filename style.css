@@ -1,5 +1,17 @@
 html,
 body * {
   font-size: x-large;
-  color: #a5e844;
+
+  font-family: 'Advent Pro', sans-serif;
+}
+
+h1 {
+  font-family: 'Ranchers', cursive !important;
+  color: tomato;
+  font-weight: 600;
+}
+
+.material-symbols-outlined {
+  color: tomato;
+  font-size: 74px;
 }
