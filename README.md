@@ -6,13 +6,14 @@
 
 _TNGs/tangibles/a thing that is perceptible by touch._
 
-a vanilla JavaScript MVC application created for collectors that aims to make categorizing and documenting your collection as easy as possible. TNGs also has the ablitly to create an anonomous album to showcase and share a collection using [IMGUR's](https://apidocs.imgur.com/#intro) API
+a vanilla JavaScript MVC application created for collectors that aims to make categorizing and documenting your collection as easy as possible. TNGs also has the ablitly to 
 
 #### why do i need TNGs?
 
 - allows you to quickly define object models for your collectible with as many/few properties as you'd like 
 - export/save spreadsheet/csv to Google Cloud  [Google Docs API](https://developers.google.com/docs/api)
-- generates an IMGUR album to showcase your collection
+- create an anonomous album to showcase and share a collection using [IMGUR's](https://apidocs.imgur.com/#intro) API
+- creates a `reactive` local storage database in the form of a JSON object
 
 #### other features / road map
 
