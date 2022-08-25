@@ -17,46 +17,20 @@ export const Stuff_App = class extends EventTarget {
     this.get = (id) => this.collection.find((thing) => thing.id === id);
   }
 
-  addThing(
-    name,
-    status,
-    price,
-    value,
-    category,
-    image,
-    notes,
-    edition,
-    variant,
-    link,
-    publisher
-  ) {
-    let thing = new Thing(
-      name?.toUpperCase(),
-      status?.toUpperCase(),
-      price,
-      value,
-      category?.toUpperCase(),
-      image,
-      notes?.toUpperCase(),
-      edition,
-      variant,
-      link,
-      publisher?.toUpperCase()
-    );
+  addThing(name) {
+    let thing = new Thing(name?.toUpperCase());
     this.id = `id_${Date.now}`;
 
-    
-    this.collection.push(thing);
-    
+    const tempArr = [];
+    tempArr.push(thing);
+    this.collection.push(thing)
 
+    // window.localStorage.setItem(
+    //   this.localStorageKey,
+    //   JSON.stringify(this.collection)
+    // );
 
-
-    window.localStorage.setItem(
-      this.localStorageKey,
-      JSON.stringify(this.collection)
-    );
-
-    this._save();
+    //this._save();
   }
 
   _readStorage() {

@@ -6,9 +6,10 @@ body * {
 }
 
 h1 {
-  font-family: 'Ranchers', cursive !important;
+  font-family: 'Exo 2', sans-serif !important;
   color: tomato;
   font-weight: 600;
+  font-size: 94px;
 }
 
 .material-symbols-outlined {
