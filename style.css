@@ -4,24 +4,21 @@
 
 html,
 body * {
-  font-size: x-large;
+  font-size: medium;
 
   font-family: 'Advent Pro', sans-serif;
 }
 
 h1 {
   font-family: 'Exo 2', sans-serif !important;
-  color: tomato;
   font-weight: 600;
-  font-size: 94px;
+  font-size: 24px;
 }
 
-/* .material-symbols-outlined {
-  color: tomato;
-  font-size: 74px;
+.material-symbols-outlined {
+  font-size: 54px;
 }
 
 span.info {
-  font-size: 16px;
-  color: lime;
-} */
+  font-size: 17px;
+}
