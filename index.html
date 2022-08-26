@@ -64,7 +64,7 @@
               autofocus="true"
               placeholder=""
               data-thing="new"
-              class="new-thing input input-sm w-full max-w-xs input-success"
+              class="new-thing input input-bordered input-sm w-full max-w-xs"
             />
           </li>
           <li class="step">Shrink the moon</li>
@@ -73,7 +73,7 @@
         </ul>
       </section>
       <!-- This footer should be hidden by default and shown when there are todos -->
-      <footer class="footer" data-stuff="footer">
+      <section class="details" data-stuff="details">
         <!-- This should be `0 items left` by default -->
         <span class="thing-count" data-thing="count"
           ><strong>0</strong> things in your stuff</span
@@ -98,16 +98,17 @@
           class="btn btn-secondary flex items-center"
           data-stuff="hide-secured"
         >
-          hide secured
+          log it
         </button>
-      </footer>
+      </details>
     </section>
-    <footer class="info">
-      <sub>double click a thing to edit</sub>
+    <footer class="info flex items-begin content-between w-auto flex-col mb-5">
+      
       <p>created by: <a href="https://twitter.com/yem_dev">mmcgraw</a></p>
-      <p>
-        Project on GitHub:
-        <a href="#">STUFF.APP</a>
+      <p class="flex items-center">Project on GitHub:
+        <a href="https://github.com/mmcgraw73/TNGs" class="flex items-center"
+          ><span class="material-symbols-outlined"> fingerprint </span>TNGs</a
+        >
       </p>
     </footer>
     <script type="module" src="js/index.js"></script>
