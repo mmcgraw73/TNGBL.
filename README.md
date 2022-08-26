@@ -20,6 +20,5 @@ a vanilla JavaScript MVC application created for collectors that aims to make ca
 - UPC barcode scanner - requires smartphone
 - item search w/in app w/ google search engine
 - IMGUR Integration
-  - e5a7c50a33effc6
-  - 6042497d51d0ef72dff5a10b5aee950305676a0e
+
   -
