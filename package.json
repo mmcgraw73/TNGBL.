@@ -2,5 +2,10 @@
   "name": "js",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "daisyui": "^2.24.0",
+    "postcss": "^8.0.9",
+    "tailwindcss": "^3.1.8"
+  }
 }

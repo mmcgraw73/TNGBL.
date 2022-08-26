@@ -16,3 +16,30 @@ h1 {
   color: tomato;
   font-size: 74px;
 }
+
+span.info {
+  font-size: 16px;
+  color: lime;
+}
+
+
+mytheme: {
+          
+  "primary": "#bef264",
+           
+  "secondary": "#e11d48",
+           
+  "accent": "#5eead4",
+           
+  "neutral": "#191D24",
+           
+  "base-100": "#2A303C",
+           
+  "info": "#fbbf24",
+           
+  "success": "#4d7c0f",
+           
+  "warning": "#ea580c",
+           
+  "error": "#dc2626",
+}
