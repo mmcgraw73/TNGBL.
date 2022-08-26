@@ -1,4 +1,5 @@
 import thing_model from './stuff';
+import {Repeater} from './repeater.class'
 import { Thing } from './thing.class';
 
 export const Stuff_App = class extends EventTarget {
@@ -6,6 +7,7 @@ export const Stuff_App = class extends EventTarget {
     super();
     this.localStorageKey = localStorageKey;
     this.collection = [];
+    
     // window.addEventListener(
     //   'storage',
     //   () => {

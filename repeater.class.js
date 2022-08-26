@@ -5,7 +5,7 @@ export const Repeater = class {
 
   $ = {
     selector: this.selectorString,
-    el: document.querySelector(selector),
+    el: document.querySelector(this.selectorString),
   };
 
   hasEl = () => this.$.el.children.length;
