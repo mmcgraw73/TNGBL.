@@ -6,21 +6,21 @@ import { Repeater } from './repeater.class';
 
 import { Stuff_App } from './stuff_app.class';
 
-const MCGRAWS_SHIT = new Stuff_App('MCGRAWS_SHIT');
+const MCGRAWS_STUFF = new Stuff_App('MCGRAWS_STUFF');
 
 const App = {
   $: {
     input: document.querySelector('[data-thing="new"]'),
     clean: document.querySelector('[data-stuff="clean"]'),
-    logg: document.querySelector('[data-stuff="log-it"]'),
+    logg: document.getElementById('logg'),
+    rpt: document.querySelector('[data-repeater="tng-prop"]'),
     count: 0,
     keys: Object.keys(thing_json),
-    rpt: new Repeater('[data-repeater="tng-prop"]'),
+    el: new Repeater('[data-repeater="tng-prop"]'),
   },
   init() {
     App.$.input.addEventListener('keyup', (e) => {
       if (e.key === 'Enter' && e.target.value.length) {
-        App.$.count++;
         console.log('cound', App.$.count, App.$.keys[App.$.count + 1]);
         MCGRAWS_SHIT.addThing(e.target.value);
         App.$.input.placeholder = `${App.$.keys[App.$.count]}`;
@@ -28,13 +28,19 @@ const App = {
       }
     });
 
-    App.$.logg.addEventListener('click', this.updateQuestion());
+    App.$.logg.addEventListener('click', (e) => {
+      console.log(App.$.el.value);
+      this.updateQuestion(e.target.value);
+    });
   },
-};
-updateQuestion: () => {
-  const tngProp = this.App.$.rpt;
-  tngProp.htmlIn('afterend');
-  input.placeholder = `${keys[$.count]}`;
+  updateQuestion(val) {
+    App.$.count = App.$.count + 1;
+    console.log(App.$.count);
+    //
+    App.$.el.htmlIn('afterend');
+    console.log('value', Object.keys(App.$.el));
+    App.$.input.placeholder = `${App.$.keys[App.$.count]}`;
+  },
 };
 App.init();
 

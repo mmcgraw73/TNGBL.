@@ -5,13 +5,17 @@ export const Repeater = class {
 
   $ = {
     selector: this.selectorString,
-    el: document.querySelector(this.selectorString),
+    el: document.querySelector('[data-repeater="tng-prop"]'),
   };
-
-  hasEl = () => this.$.el.children.length;
-
-  htmlIn = (pos) =>
-    this.hasEl
-      ? $.el.insertAdjacentHTML(pos, el.cloneNode(true).outerHTML)
+  hasEl() {
+    console.log('el', this.$.el);
+    return typeof this.$.el !== 'undefined';
+  }
+  htmlIn(pos) {
+    //console.log('html in', this.$.selector);
+    return this.hasEl()
+      ? this.$.el.insertAdjacentHTML(pos, this.$.el.cloneNode(true).outerHTML)
       : '';
+  }
 };
+
