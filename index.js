@@ -22,8 +22,9 @@ const App = {
     App.$.input.addEventListener('keyup', (e) => {
       if (e.key === 'Enter' && e.target.value.length) {
         console.log('cound', App.$.count, App.$.keys[App.$.count + 1]);
-        MCGRAWS_SHIT.addThing(e.target.value);
-        App.$.input.placeholder = `${App.$.keys[App.$.count]}`;
+        this.updateQuestion();
+        //MCGRAWS_SHIT.addThing(e.target.value);
+        App.$.input.placeholder = `${thing_json[App.$.count]}`;
         App.$.input.value = '';
       }
     });
@@ -33,7 +34,7 @@ const App = {
       this.updateQuestion(e.target.value);
     });
   },
-  updateQuestion(val) {
+  updateQuestion() {
     App.$.count = App.$.count + 1;
     console.log(App.$.count);
     //
