@@ -7,7 +7,7 @@ export const Repeater = class {
     selector: this.selectorString,
     el: document.querySelector('[data-repeater="tng-prop"]'),
     label: document.querySelector('[data-label="tng-label"]'),
-    oldlabel: document.getElementsByTagName('h3'),
+    oldlabel: document.getElementsByClassName('toast-wrap'),
   };
   hasEl() {
     return typeof this.$.el !== 'undefined' || this.$.el !== null;
@@ -15,7 +15,13 @@ export const Repeater = class {
   updateLabel(pos, value, idx) {
     this.$.label.insertAdjacentHTML(
       pos,
-      `<h3 data-label="old-label">${value}</h3>`
+      `<div class="toast-wrap relative mb-3"><div class="toast absolute top-0 left-0">
+      <div class="alert alert-info">
+        <div>
+          <span>${value}.</span>
+        </div>
+      </div>
+    </div></div>`
     );
     console.log('len', this.$.label);
     console.log('el', this.$.el, this.$.oldlabel[0]);
