@@ -35,4 +35,4 @@ LONG TERM:
 
 SPIT-BALLIN'
 
-- i want an application that will let me define a json object defining attributes of a type of 'tangible' collectible. ie. silkscreen posters, comic books, LOTR collection of POP vinyls and first editions. using only that json object build and serve a webpage that showcases the user collection in a fully custimizable SPA with CRUD functionality on demand
+- i want an application that will let me define a json object defining attributes of a type of 'tangible' collectible. ie. silkscreen posters, comic books, LOTR collection of POP vinyls and first editions. using that json object build a collection to export csv or pdfs?maybe - also serve a webpage that showcases the user collection in a custimizable SPA with CRUD functionality - initially using local storage -
