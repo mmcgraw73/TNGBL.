@@ -1,5 +1,5 @@
 import thing_model from './stuff';
-import {Repeater} from './repeater.class'
+import { Repeater } from './repeater.class';
 import { Thing } from './thing.class';
 
 export const Stuff_App = class extends EventTarget {
@@ -7,7 +7,8 @@ export const Stuff_App = class extends EventTarget {
     super();
     this.localStorageKey = localStorageKey;
     this.collection = [];
-    
+    this.thing = thing_model;
+
     // window.addEventListener(
     //   'storage',
     //   () => {
@@ -19,13 +20,24 @@ export const Stuff_App = class extends EventTarget {
     this.get = (id) => this.collection.find((thing) => thing.id === id);
   }
 
+  //-- common functionality amoung all STUFF_APPS
+
+  get attributes() {
+    console.log('thing', Object.keys(this.thing));
+    return Object.keys(this.thing);
+  }
+
+  breakdownModel(model) {
+    console;
+  }
+
   addThing(name) {
     let thing = new Thing(name?.toUpperCase());
     this.id = `id_${Date.now}`;
 
     const tempArr = [];
     tempArr.push(thing);
-    this.collection.push(thing)
+    this.collection.push(thing);
 
     // window.localStorage.setItem(
     //   this.localStorageKey,

@@ -12,16 +12,21 @@ const App = {
   $: {
     input: document.querySelector('[data-thing="new"]'),
     clean: document.querySelector('[data-stuff="clean"]'),
+    label: document.querySelector('.input-value'),
     logg: document.getElementById('logg'),
     rpt: document.querySelector('[data-repeater="tng-prop"]'),
     count: 0,
     keys: Object.keys(thing_json),
     el: new Repeater('[data-repeater="tng-prop"]'),
+    thing: {},
   },
   init() {
+    const the_app = App.$;
     App.$.input.addEventListener('keyup', (e) => {
+      //console.log('whaaaaa??', MCGRAWS_STUFF.attributes);
       if (e.key === 'Enter' && e.target.value.length) {
-        console.log('cound', App.$.count, App.$.keys[App.$.count + 1]);
+        //console.log('cound', the_app.thing[the_app.keys[the_app.count]]);
+        console.log('turds', the_app.keys[the_app.count]);
         this.updateQuestion();
         //MCGRAWS_SHIT.addThing(e.target.value);
         App.$.input.placeholder = `${thing_json[App.$.count]}`;
@@ -32,6 +37,7 @@ const App = {
     App.$.logg.addEventListener('click', (e) => {
       console.log(App.$.el.value);
       this.updateQuestion(e.target.value);
+      this.$.label.textContent = e.target.value;
     });
   },
   updateQuestion() {

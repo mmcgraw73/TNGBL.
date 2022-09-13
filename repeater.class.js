@@ -9,7 +9,7 @@ export const Repeater = class {
   };
   hasEl() {
     console.log('el', this.$.el);
-    return typeof this.$.el !== 'undefined';
+    return typeof this.$.el !== 'undefined' || this.$.el !== null;
   }
   htmlIn(pos) {
     //console.log('html in', this.$.selector);
