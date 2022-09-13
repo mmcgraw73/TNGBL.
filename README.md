@@ -4,6 +4,8 @@
 
 #### what is TNGs?
 
+please know this is a WIP in the EARLY stages - im aware its buggy as ga swamp land
+
 _TNGs/tangibles/a thing that is perceptible by touch._
 
 a vanilla JavaScript MVC application created for collectors that aims to make categorizing and documenting your collection as easy as possible.

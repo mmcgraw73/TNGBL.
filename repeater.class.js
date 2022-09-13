@@ -16,7 +16,7 @@ export const Repeater = class {
     return this.hasEl()
       ? this.$.el.insertAdjacentHTML(
           pos,
-          `<kbd class="kbd kbd-md mb-2">${key} <strong class="pl-3">${value}</strong></kbd>`
+          `<kbd class="kbd kbd-md mb-2">${key} <span class="text-secondary text-xl text-bolder pl-3">${value}</span></kbd>`
         )
       : '';
   }
