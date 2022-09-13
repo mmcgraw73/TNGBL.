@@ -25,9 +25,9 @@ const App = {
     App.$.input.addEventListener('keyup', (e) => {
       //console.log('whaaaaa??', MCGRAWS_STUFF.attributes);
       if (e.key === 'Enter' && e.target.value.length) {
-        //console.log('cound', the_app.thing[the_app.keys[the_app.count]]);
+        //console.log('count', the_app.thing[the_app.keys[the_app.count]]);
         console.log('turds', the_app.keys[the_app.count]);
-        this.updateQuestion();
+        this.updateQuestion(the_app.keys[the_app.count], e.target.value);
         //MCGRAWS_SHIT.addThing(e.target.value);
         App.$.input.placeholder = `${thing_json[App.$.count]}`;
         App.$.input.value = '';
@@ -40,11 +40,11 @@ const App = {
       this.$.label.textContent = e.target.value;
     });
   },
-  updateQuestion() {
+  updateQuestion(key, val) {
     App.$.count = App.$.count + 1;
     console.log(App.$.count);
     //
-    App.$.el.htmlIn('afterend');
+    App.$.el.htmlIn('afterend', key, val);
     console.log('value', Object.keys(App.$.el));
     App.$.input.placeholder = `${App.$.keys[App.$.count]}`;
   },
