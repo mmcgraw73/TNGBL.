@@ -16,9 +16,9 @@ export const Repeater = class {
     this.$.label.insertAdjacentHTML(
       pos,
       `<div class="toast-wrap relative mb-3"><div class="toast absolute top-0 left-0">
-      <div class="alert alert-info">
+      <div class="alert alert-success shadow-lg mb-4" style="max-width: 52%">
         <div>
-          <span>${value}.</span>
+          <h2 class="text-xxl font-bold uppercase">${value}.</h2>
         </div>
       </div>
     </div></div>`
