@@ -23,10 +23,9 @@ export const Repeater = class {
   updateLabel(pos, value, idx) {
     this.$.label.insertAdjacentHTML(
       pos,
-      `<div class="toast-wrap relative mb-3"><div class="toast absolute top-0 left-0">
-      <div class="alert alert-success shadow-lg mb-4" style="max-width: 52%">
+      `<div class="toast-wrap relative mb-3"><div class="">
+      <div class="btn btn-accent mb-4" style="max-width: 52%">
         <div>
-        ${this.$.inputMarkup}
           <h2 class="text-xxl font-bold uppercase">${value}.</h2>
         </div>
       </div>
@@ -41,10 +40,7 @@ export const Repeater = class {
   htmlIn(pos, key, value) {
     //console.log('html in', this.$.selector);
     return this.hasEl()
-      ? this.$.el.insertAdjacentHTML(
-          pos,
-          `<kbd class="kbd kbd-md mb-2">${key} <span class="text-secondary text-xl text-bolder pl-3">${value}</span></kbd>`
-        )
+      ? this.$.el.insertAdjacentHTML(pos, this.$.inputMarkup)
       : '';
   }
 };
