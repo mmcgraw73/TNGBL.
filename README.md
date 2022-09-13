@@ -1,6 +1,6 @@
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-smcwve)
 
-[ROUGH - DEMO](https://js-smcwve.stackblitz.io)wna
+[ROUGH - DEMO](https://js-smcwve.stackblitz.io)
 
 # TNGs.
 
