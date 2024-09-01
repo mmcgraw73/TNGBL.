@@ -36,4 +36,8 @@ LONG TERM:
 SPIT-BALLIN'
 
 - i want an application that will let me define a json object defining attributes of a type of 'tangible' collectible. ie. silkscreen posters, comic books, LOTR collection of POP vinyls and first editions. using that json object build a collection to export csv or pdfs?maybe - also serve a webpage that showcases the user collection in a custimizable SPA with CRUD functionality - initially using local storage -
-![whitehose24](https://github.com/user-attachments/assets/a9e257ff-a5f1-46d3-9cb7-83a352c39e29)
+
+![whitehose24](https://github.com/user-attachments/assets/ab750fa8-2392-4c94-abd2-6ad2e7d0db95)
+
+
+
